@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+</head>
+<body>
+    <h1>Quiz App</h1>
+    <form method="post">
+        {% for question in questions %}
+            <h3>{{ question['question'] }}</h3>
+            {% for choice in question['choices'] %}
+                <input type="radio" name="question_{{ loop.index0 }}" value="{{ choice }}"> {{ choice }}<br>
+            {% endfor %}
+            <br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
