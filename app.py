@@ -18,6 +18,7 @@ quiz_questions = [
 
 @app.route('/')
 def index():
+    
     return render_template('index.html', questions=quiz_questions)
 
 if __name__ == '__main__':
